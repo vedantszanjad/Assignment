@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config />
+
+		<bean id="movieBean" class="com.yash.programone.Movie">
+  <constructor-arg value="KGF"></constructor-arg>
+  <constructor-arg value="11:00 AM to 2:00 PM, and other timing"></constructor-arg>
+   </bean>	
+   
+   <bean id="cinemaHall" class="com.yash.programone.CinemaHall">
+   <constructor-arg value="Ionx"></constructor-arg>
+  <!-- <constructor-arg value="GADAR2"></constructor-arg> -->
+   <constructor-arg>  
+        <ref bean="movieBean"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="city" class="com.yash.programone.City">
+    <constructor-arg value="Pune"></constructor-arg>
+  <constructor-arg value="411093"></constructor-arg>
+  <!-- <constructor-arg value="Ionx"></constructor-arg> -->
+   <constructor-arg>  
+      <ref bean="cinemaHall"/>  
+  </constructor-arg>  
+   </bean>
+   
+   	<bean id="movieBean1" class="com.yash.programone.Movie">
+  <constructor-arg value="Rakshabandhan"></constructor-arg>
+  <constructor-arg value="11:00 AM to 1:30 PM and other timing "></constructor-arg>
+   </bean>	
+   
+   <bean id="cinemaHall1" class="com.yash.programone.CinemaHall">
+   <constructor-arg value="Velocity"></constructor-arg>
+  <!-- <constructor-arg value="GADAR2"></constructor-arg> -->
+   <constructor-arg>  
+        <ref bean="movieBean1"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="city1" class="com.yash.programone.City">
+    <constructor-arg value="Pune"></constructor-arg>
+  <constructor-arg value="411093"></constructor-arg>
+  <!-- <constructor-arg value="Ionx"></constructor-arg> -->
+   <constructor-arg>  
+      <ref bean="cinemaHall1"/>  
+  </constructor-arg>  
+   </bean>
+   
+   	<bean id="movieBean2" class="com.yash.programone.Movie">
+  <constructor-arg value="Aashique 2"></constructor-arg>
+  <constructor-arg value="11:00 AM to 1:30 PM and other timing "></constructor-arg>
+   </bean>	
+   
+   <bean id="cinemaHall2" class="com.yash.programone.CinemaHall">
+   <constructor-arg value="Velocity"></constructor-arg>
+  <!-- <constructor-arg value="GADAR2"></constructor-arg> -->
+   <constructor-arg>  
+        <ref bean="movieBean2"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="city2" class="com.yash.programone.City">
+    <constructor-arg value="Pune"></constructor-arg>
+  <constructor-arg value="411097"></constructor-arg>
+  <!-- <constructor-arg value="Ionx"></constructor-arg> -->
+   <constructor-arg>  
+      <ref bean="cinemaHall2"/>  
+  </constructor-arg>  
+   </bean>
+   
+   	<bean id="movieBean3" class="com.yash.programone.Movie">
+  <constructor-arg value="Ra-One"></constructor-arg>
+  <constructor-arg value="12:00 PM to 1:30 PM and other timing "></constructor-arg>
+   </bean>	
+   
+   <bean id="cinemaHall3" class="com.yash.programone.CinemaHall">
+   <constructor-arg value="INOX"></constructor-arg>
+  <!-- <constructor-arg value="GADAR2"></constructor-arg> -->
+   <constructor-arg> 
+        <ref bean="movieBean3"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="city3" class="com.yash.programone.City">
+    <constructor-arg value="Pune"></constructor-arg>
+  <constructor-arg value="411095"></constructor-arg>
+  <!-- <constructor-arg value="Ionx"></constructor-arg> -->
+   <constructor-arg>  
+      <ref bean="cinemaHall3"/>  
+  </constructor-arg>  
+   </bean>
+   
+   <!-- SEOCND -->
+   
+   	<bean id="tri" class="com.yash.programtwo.Triangle">
+   	<constructor-arg value="Triangle"></constructor-arg>
+   </bean>	
+   
+   <bean id="rec" class="com.yash.programtwo.Rectangle">
+   <constructor-arg value="Rectangle"></constructor-arg>
+   <constructor-arg> 
+        <ref bean="tri"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="para" class="com.yash.programtwo.Parallelogram">
+  <constructor-arg value="Parallelogram"></constructor-arg>
+   <constructor-arg>  
+      <ref bean="rec"/>  
+  </constructor-arg>  
+   </bean>
+   
+   <!-- Third -->
+   
+   	<bean id="id" class="com.yash.programthree.ConstructorMessage">
+   	<constructor-arg value="Hello World"></constructor-arg>
+   </bean>	
+   
+   <!-- Fourth -->
+   
+   <bean id="idsetter" class="com.yash.programfour.SetterMessage">
+   	<property name = "message" value = "Hello"></property>
+   </bean>	
+   <!-- Five -->
+  <bean id="p" class="com.yash.programfive.PrintFactory" factory-method="getPrint"></bean>	
+  <bean id="s" class="com.yash.programfive.PrintFactory" factory-method="getPrintSuper"></bean>	
+  <bean id="c" class="com.yash.programfive.PrintFactory" factory-method="getPrintClerk"></bean>
+  
+  <!-- Sixth -->	
+  
+  
+<bean id="engine" class="com.yash.programsix.Engine">
+<property name="engineType"  value="three cylinder engine"></property>
+<property name="enginePower" value="120cc"></property>
+<property name="engineName"  value="petrol"></property>
+</bean>
+
+
+
+<bean id="engine1" class="com.yash.programsix.Engine">
+<property name="engineType"  value="four cylinder engine"></property>
+<property name="enginePower" value="1200cc"></property>
+<property name="engineName"  value="cng"></property>
+</bean>
+
+
+
+<bean id="engine2" class="com.yash.programsix.Engine">
+<property name="engineType"  value="five cylinder engine"></property>
+<property name="enginePower" value="1500cc"></property>
+<property name="engineName"  value="petrol"></property>
+</bean>
+
+
+
+<bean id="engine3" class="com.yash.programsix.Engine">
+<property name="engineType"  value="six cylinder engine"></property>
+<property name="enginePower" value="2200cc"></property>
+<property name="engineName"  value="diesel"></property>
+</bean>
+
+
+
+<bean id="vehicle" class="com.yash.programsix.Vehicle">
+<property name="vehicleName" value="bike"></property>
+<property name="vehicleType" value="TWO WHEELER"></property>
+<property name="vehicleMileage" value="60 km/lit"></property>
+<property name="vehiclePrice" value="125000"></property>
+<property name="engine" ref="engine"></property>
+</bean>
+
+
+
+<bean id="vehicle1" class="com.yash.programsix.Vehicle">
+<property name="vehicleName" value="car"></property>
+<property name="vehicleType" value="FOUR WHEELER"></property>
+<property name="vehicleMileage" value="20 km/lit"></property>
+<property name="vehiclePrice" value="1125000"></property>
+<property name="engine" ref="engine1"></property>
+</bean>
+
+
+
+<bean id="vehicle2" class="com.yash.programsix.Vehicle">
+<property name="vehicleName" value="auto_riskshaws"></property>
+<property name="vehicleType" value="THREE WHEELER"></property>
+<property name="vehicleMileage" value="30 km/lit"></property>
+<property name="vehiclePrice" value="425000"></property>
+<property name="engine" ref="engine2"></property>
+</bean>
+
+
+
+<bean id="vehicle3" class="com.yash.programsix.Vehicle">
+<property name="vehicleName" value="car"></property>
+<property name="vehicleType" value="FOUR WHEELER"></property>
+<property name="vehicleMileage" value="17 km/lit"></property>
+<property name="vehiclePrice" value="1425000"></property>
+<property name="engine" ref="engine3"></property>
+</bean>
+</beans>
