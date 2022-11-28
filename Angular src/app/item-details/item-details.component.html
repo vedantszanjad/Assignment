@@ -1,0 +1,17 @@
+<p>item-details works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of items">
+        <th scope="row">{{a.itemId}}</th>
+        <th scope="row">{{a.itemName}}</th>
+        <th scope="row">{{a.price}}</th>
+      </tr>
+    </tbody>
+  </table> 

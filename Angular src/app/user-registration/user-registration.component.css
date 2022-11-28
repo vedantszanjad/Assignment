@@ -1,0 +1,18 @@
+container-fluid
+{
+    padding: auto;
+}
+
+button.register
+{
+    /* align-items: center; */
+    float: right;
+} 
+
+/* <div *ngIf="registrationForm.get('userName')?.valid && 
+registrationForm.get('userName')?.untouched" class="invalid-feedback">
+<div *ngIf="registrationForm.get('userName')?.errors?.['required']" 
+    class="text-danger">User is required</div>
+<div *ngIf="registrationForm.get('userName')?.errors?.['minLength']" 
+    class="text-danger">User atleast required 2 characters</div>
+</div> */

@@ -1,0 +1,33 @@
+<p>student-result works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Roll NO</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Marks</th>
+        <th scope="col">Result</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of results">
+        <th scope="row">{{result.studentId}}</th>
+        <th scope="row">{{result.studentName}}</th>
+        <th scope="row">{{result.marks}}</th>
+        <th scope="row">
+            <div *ngIf="result.marks> 75">
+                Pass with Distinction
+            </div>
+            <div *ngIf="result.marks &lt; 75 && result.marks &gt; 60">
+                First Class
+            </div>
+            <div *ngIf="result.marks &lt; 61 && result.marks &gt; 40">
+                Second Class
+            </div>
+            <div *ngIf="result.marks &lt; 40">
+                Fail..
+            </div>
+
+        </th>
+      </tr>
+    </tbody>
+  </table> 
